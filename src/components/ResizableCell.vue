@@ -20,9 +20,7 @@ import VueDraggableResizable from 'vue-draggable-resizable';
 
 export default {
   data() {
-    return {
-      headerRef : null,
-    }
+    return {headerRef : null}
   },
   computed : {
     col() {
@@ -32,7 +30,6 @@ export default {
   methods : {
     onDrag(x) {
       this.draggingState[this.col.dataIndex] = 0;
-
       this.col.width = Math.max(x, 1);
     },
     onDragstop () {
